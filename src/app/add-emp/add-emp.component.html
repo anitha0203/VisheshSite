@@ -1,1 +1,100 @@
-<p>add-emp works!</p>
+<style>
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #e5e5e5;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .app-header {
+        justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
+    }
+    
+    .main-wrapper {
+        height: 80%;
+    }
+    
+    .one{
+        margin-left: 38%;
+        margin-top: 10%;
+        margin-right: auto;
+        
+    }
+    
+    .box {
+        position: relative;
+        top: 0;
+        opacity: 1;
+        float: left;
+        padding: 60px 50px 40px 50px;
+        width: 100%;
+        background: #fff;
+        border-radius: 10px;
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        z-index: 5;
+        max-width: 500px;
+    }
+    
+
+
+    </style>
+
+<!--////emp_id, first_name, last_name, email, phone_num, address, gender, designation-->
+<div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+        <h1 style="text-align: center;font-weight: 500;">Enter Employee details</h1><br>
+  
+      <form [formGroup]="loginfrm" (ngSubmit)="onSubmit()">
+        <label>emp_id: </label>
+        <input type="number" id="emp_id" formControlName="emp_id"  required  name="emp_id" style="width: 335px;"><br><br>
+
+        <div style="width:100%;">
+        <div style="width:45%;float:left;">
+        <label>first_name: </label>
+        <input type="text" id="first_name" formControlName="first_name"  required  name="first_name">
+        </div>
+        <div style="width:45%;float:right;">
+            
+        <label>last_name: </label>
+        <input type="text" id="last_name" formControlName="last_name"  required  name="last_name">
+        </div>
+        </div>
+        <div style="width:100%;"><br><br><br>
+            <div style="width:45%;float:left;">
+
+        <label>email: </label>
+        <input type="email" id="email" formControlName="email"  required  name="email">
+    </div>
+    <div style="width:45%;float:right;">
+        <label>phone_num: </label>
+        <input type="text" id="phone_num" formControlName="phone_num"  required  name="phone_num">
+        </div>
+        </div><br><br><br><br>
+        <label>address: </label>
+        <input type="text" id="address" formControlName="address"  required  name="address" style="width: 335px;"><br><br>
+        <div style="width:100%;">
+            <div style="width:45%;float:left;">
+
+        <label>gender: </label>
+        <input type="text" id="gender" formControlName="gender"  required  name="gender">
+    </div>
+    <div style="width:45%;float:right;">
+        <label>designation: </label>
+        <input type="text" id="designation" formControlName="designation"  required  name="designation">
+        </div>
+        </div><br><br><br>
+  
+        <button mat-stroked-button color="accent" class="btn-block" type="submit">Submit</button>
+  
+      </form>
+    </mat-card>
+  </div>

@@ -9,6 +9,6 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'vishesh';
   constructor(private router:Router){
-    this.router.navigate([`emp-list`]);
+    this.router.navigate([`home`]);
   }
 }
