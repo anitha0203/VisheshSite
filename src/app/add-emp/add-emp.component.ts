@@ -16,8 +16,6 @@ export class AddEmpComponent implements OnInit {
   ngOnInit(): void {
   }
 
-////emp_id, first_name, last_name, email, phone_num, address, gender, designation
-
   loginfrm = new FormGroup({
     emp_id: new FormControl(),
     first_name: new FormControl(),
@@ -30,14 +28,14 @@ export class AddEmpComponent implements OnInit {
   })
 message:string='';
   getDataFormAPI(){
-    this.uservice.getData('api/addBooks/?emp_id=' + this.loginfrm.value.emp_id + '&first_name=' + this.loginfrm.value.first_name + 
+    this.uservice.getData('api/addEmp/?emp_id=' + this.loginfrm.value.emp_id + '&first_name=' + this.loginfrm.value.first_name + 
     '&last_name=' + this.loginfrm.value.last_name + '&email=' + this.loginfrm.value.email + '&phone_num=' + 
     this.loginfrm.value.phone_num + '&address=' + this.loginfrm.value.address +
      '&gender=' + this.loginfrm.value.gender + '&designation=' + this.loginfrm.value.designation).subscribe((response) => {
        
         console.log('Its Working', response);
         this.message = JSON.stringify(response);
-       // this.router.navigate([`library`]);
+       
     }, (error) => {
       console.log('It is a error', error);
     })

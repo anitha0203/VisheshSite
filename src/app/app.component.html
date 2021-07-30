@@ -1,8 +1,9 @@
 <div>
     <img src="assets\Vishesh_logo4.png" width="150"/>
-    <button type="button" class="btn btn-primary">Home</button>
-    <button type="button" class="btn btn-primary">About</button>
-    <button type="button" class="btn btn-primary">Employee List</button>
-    <button type="button" class="btn btn-primary">Add Employee</button>
+    <button type="button" class="btn btn-primary" (click)="homepage()">Home</button>
+    <button type="button" class="btn btn-primary" (click)="aboutpage()">About</button>
+    <button type="button" class="btn btn-primary" (click)="listpage()">Employee List</button>
+    <button type="button" class="btn btn-primary" (click)="addpage()">Add Employee</button>
+    <button type="button" class="btn btn-primary" (click)="bookpage()">Book List</button>
 </div>
 <router-outlet></router-outlet>

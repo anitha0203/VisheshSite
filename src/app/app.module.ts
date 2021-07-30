@@ -16,6 +16,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
+import { BookListComponent } from './book-list/book-list.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AboutComponent } from './about/about.component';
     EmpListComponent,
     AddEmpComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    BookListComponent
   ],
   imports: [
     BrowserModule,
