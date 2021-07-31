@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'vishesh';
   constructor(private router:Router){
-    this.router.navigate([`about`]);
+    this.router.navigate([`book-list`]);
   }
 
   homepage() : void {
@@ -23,8 +23,5 @@ export class AppComponent {
   }
   addpage() : void {
     this.router.navigate([`add-emp`]);
-  }
-  bookpage() : void {
-    this.router.navigate([`book-list`]);
   }
 }

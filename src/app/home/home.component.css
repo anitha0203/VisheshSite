@@ -1,4 +1,11 @@
-*{
-  background-image: url('src\assets\Vishesh_logo4.png');
+img{
+  width: 100%;
+  height: 600px;
+}
+h2{
+  margin: 75px;
+}
+span{
+  padding-top: 20px;
 }
 
