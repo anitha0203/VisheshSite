@@ -40,12 +40,15 @@ body {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     z-index: 5;
-    max-width: 500px;
+    max-width: 600px;
 }
 button
 {
     margin-left: 150px;
     
+}
+label{
+    font-size: 18px;
 }
 .main-wrapper
  {

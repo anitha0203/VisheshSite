@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'vishesh';
   constructor(private router:Router){
-    this.router.navigate([`book-list`]);
+    this.router.navigate([`about`]);
   }
 
   homepage() : void {

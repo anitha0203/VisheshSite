@@ -54,38 +54,45 @@
     <h1 style="text-align: center;font-weight: 500;">Enter Employee details</h1><br>
     <form [formGroup]="loginfrm" (ngSubmit)="onSubmit()">
     <div class="col">
-    <label for="inputEmpId" class="form-label">Emp Id</label>
-    <input type="Number" class="form-control" placeholder="Enter Employe Id" aria-label="Emp Id">
+    <label for="emp_id" class="form-label">Emp Id</label>
+    <input type="Number" id="emp_id" formControlName="emp_id" class="form-control" required name="emp_id" placeholder="Enter Employe Id" aria-label="Emp Id">
     </div><br>
     <div class="row g-3">
     <div class="col">
-    <label for="inputEmail4" class="form-label">First Name</label>
-    <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+    <label for="first_name" class="form-label">First Name</label>
+    <input type="text" id="first_name" formControlName="first_name" required name="first_name" class="form-control" placeholder="First name" aria-label="First name">
     </div>
     <div class="col">
-    <label for="inputEmail4" class="form-label">Last Name</label>
-    <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+    <label for="last_name" class="form-label">Last Name</label>
+    <input type="text" id="last_name" formControlName="last_name" required name="last_name" class="form-control" placeholder="Last name" aria-label="Last name">
     </div>
     </div>
     <br>
     
     <div class="row g-3">
-    <div class="col-md-6">
-    <label for="inputEmail4" class="form-label">Email</label>
-    <input type="email" class="form-control" id="inputEmail4" placeholder="Email" style="width: 400px;">
+    <div class="col-12">
+    <label for="email" class="form-label">Email</label>
+    <input type="email"  class="form-control" id="email" formControlName="email" required name="email" placeholder="Email">
     </div><br>
     <div class="col-12">
-    <label for="inputPhoneNumber" class="form-label">Phone Number</label>
-    <input type="text" class="form-control" id="inputPhoneNumber" placeholder="Phone Number">
+    <label for="phone_num" class="form-label">Phone Number</label>
+    <input type="text" class="form-control" id="phone_num" formControlName="phone_num" required name="phone_num" placeholder="Phone Number">
     </div>
     <div class="col-12">
-    <label for="inputAddress2" class="form-label">Address</label>
-    <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+    <label for="address" class="form-label">Address</label>
+    <input type="text" class="form-control" id="address" formControlName="address" required name="address" placeholder="Apartment, studio, or floor">
     </div>
-    <div class="col-md-6">
-    <label for="inputCity" class="form-label">Disignation</label>
-    <input type="text" class="form-control" id="inputCity" style="width: 400px;" placeholder="Disignation">
+    <div class="col-12"> 
+      <label for="gender" class="form-label">Gender</label>
+       <select id="gender" class="form-select" formControlName="gender" required name="gender">
+        <option>Male</option>
+        <option>Female</option>
+      </select>
     </div>
+    <div class="col-12">
+      <label for="designation" class="form-label">Disignation</label>
+      <input type="text" class="form-control" id="designation" formControlName="designation" required name="designation" placeholder="Disignation">
+      </div>
     <div class="col-12">
     <button type="submit" class="btn btn-primary" >Sign in</button>
     </div>
