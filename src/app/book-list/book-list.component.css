@@ -10,3 +10,8 @@ p{
     font-size: 15px;
     line-height: 2em;
 }
+h2{
+    margin-left: 50px;
+    font-size: 22px;
+    font-weight: 500;
+}
