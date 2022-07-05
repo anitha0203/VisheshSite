@@ -4,8 +4,28 @@ img{
 }
 h2{
   margin: 75px;
+  margin-bottom: 25px;
 }
 span{
   padding-top: 20px;
 }
 
+img{
+  width: 100%;
+  height: 600px;
+}
+h2{
+  margin-top: 75px;
+  font-size: 25px;
+}
+p{
+  padding-top: 20px;
+  text-align: center;
+  font-size: 17px;
+  line-height: 1.6em;
+}
+  hr{
+   color:black;
+  margin: 0px 46%;
+  
+  }

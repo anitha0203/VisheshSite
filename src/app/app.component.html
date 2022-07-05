@@ -1,8 +1,22 @@
 <div>
     <img src="assets\Vishesh_logo4.png" width="150"/>
-    <button type="button" class="btn btn-primary" (click)="homepage()">Home</button>
-    <button type="button" class="btn btn-primary" (click)="aboutpage()">About</button>
-    <button type="button" class="btn btn-primary" (click)="listpage()">Employee List</button>
-    <button type="button" class="btn btn-primary" (click)="addpage()">Add Employee</button>
+    <button type="button" (click)="homepage()">Home</button>
+    <button type="button" (click)="aboutpage()">About</button>
+    <button type="button" (click)="servicepage()">Services</button>
+    <button type="button" (click)="listpage()">Employee List</button>
+    <button type="button" (click)="addpage()">Add Employee</button>
+    <button type="button" (click)="attendpage()">Attendence</button>
 </div>
 <router-outlet></router-outlet>
+
+<!--
+    <div>
+    <img src="assets\Vishesh_logo4.png" width="150"/>
+    <a class="b1" (click)="homepage()">Home</a>
+    <a class="b1" (click)="aboutpage()">About</a>
+    <a class="b1" (click)="servicepage()">Services</a>
+    <a class="b1" (click)="listpage()">Employee List</a>
+    <a class="b1" (click)="addpage()">Add Employee</a>
+</div>
+<router-outlet></router-outlet>
+-->

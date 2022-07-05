@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./book-list.component.css']
 })
 export class BookListComponent implements OnInit {
+  myFunctionOne() {
+    throw new Error('Method not implemented.');
+  }
 
   constructor() { }
 

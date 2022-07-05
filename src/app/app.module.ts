@@ -17,6 +17,13 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { BookListComponent } from './book-list/book-list.component';
+import { ServicesComponent } from './services/services.component';
+import { UpdateComponent } from './update/update.component';
+import { DeleteEmpComponent } from './delete-emp/delete-emp.component';
+import { AttendComponent } from './attend/attend.component';
+import { MatRadioModule } from '@angular/material/radio';
+import { RxjsComponent } from './rxjs/rxjs.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +32,13 @@ import { BookListComponent } from './book-list/book-list.component';
     AddEmpComponent,
     HomeComponent,
     AboutComponent,
-    BookListComponent
+    BookListComponent,
+    ServicesComponent,
+    UpdateComponent,
+    DeleteEmpComponent,
+    AttendComponent,
+    RxjsComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +49,7 @@ import { BookListComponent } from './book-list/book-list.component';
     MatFormFieldModule,
     MatButtonModule,
     MatCardModule,
-    MatToolbarModule
+    MatToolbarModule,MatRadioModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,40 @@
+<!--
+    <div class="row">
+	<div class="col-md-12">
+		<div class="box box-primary">
+			<div class="box-header with-border">
+				<h3 class="box-title"><i class="fa fa-search"></i> Select Class For Attendance</h3>
+			</div>
+			<form id="form1" action="" method="post" accept-charset="utf-8">
+				<div class="box-body">						
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label for="exampleInputEmail1">Class</label><small class="req"> *</small>
+								<select id="classid" name="classid" class="form-control" required>
+									<option value="">Select</option>												
+								</select>
+								<span class="text-danger"></span>
+							</div>
+						</div>																	
+					</div>
+				</div>
+				<div class="box-footer">
+					<button type="button" id="search" name="search" value="search" style="margin-bottom:10px;" class="btn btn-primary btn-sm  checkbox-toggle"><i class="fa fa-search"></i> Search</button> <br>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+-->
+<div class="main">
+    <h2>Enter employee id</h2>
+    
+    <input type="number" class="emp_id" [(ngModel)]='emp_id'><br><br>
+	<mat-radio-group id="val"  [(ngModel)]='val' required>
+		<mat-radio-button value="1" style="margin-right: 10px;">Present</mat-radio-button>
+		<mat-radio-button value="2">Absent</mat-radio-button>
+	  </mat-radio-group>   <br><br> 
+    <button class="btn btn-primary" (click)=getData() style="margin-left: 65px;">click</button><br>
+    <h2 style="text-align: center;margin-left: -90px;">{{message}}</h2>
+</div>

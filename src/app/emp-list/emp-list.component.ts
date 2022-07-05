@@ -11,7 +11,7 @@ import { UserServiceService } from '../user.service';
 export class EmpListComponent implements OnInit {
 
   constructor(private router:Router,private formBuilder: FormBuilder,private uservice: UserServiceService) { }
-  
+
    users = [{emp_id:'', first_name:'', last_name:'', email:'', phone_num:'', address:'',gender:'',designation:''}]
 
 //emp_id, first_name, last_name, email, phone_num, address, gender, designation
@@ -20,18 +20,35 @@ export class EmpListComponent implements OnInit {
 
   }
 
-
+  message:any;
   user1:string='';
   getDataFormAPI(){
     this.uservice.getData('api/getEmpList').subscribe((response) => {
-       
-      //  console.log('Its Working', response);
-        this.user1 = JSON.stringify(response);
-      //  console.log('users values' + this.user1);
-        this.users = JSON.parse(this.user1);
-      //  this.message = "Details are submitted";
+      console.log("this is res  "+response)
+       if(response=="1")
+       {
+          this.message = "There is no employees table";
+       }
+       else if(response=="2")
+       {
+          this.message = "There is no data found in employees table";
+       }
+       else
+       {
+          this.user1 = JSON.stringify(response);
+          this.users = JSON.parse(this.user1);
+          console.log("this is users",this.users)
+       }
+
     }, (error) => {
-      console.log('It is a error', error);
+      console.log('It is a error');
     })
-}
+  }
+
+  updatepage(){
+    this.router.navigate([`update`]);
+  }
+  deleteEmp(){
+    this.router.navigate([`delete-emp`]);
+  }
 }

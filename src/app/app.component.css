@@ -2,9 +2,20 @@ button{
     padding: 8px 12px;
     margin-left: 10px;
     font-size: 18px;
+    background-color: #001a66;
+    border: none;
+    color: white;
+}
+button:hover{
+    background-color: #2e336e;
+    box-shadow: 5px 6px 8px 5px rgba(68, 6, 80, 0.2), 0 6px 20px 0 rgba(43, 7, 85, 0.19);
+}
+button:active{
+    background-color: #2e336e;
+    box-shadow: 5px 6px 8px 5px rgba(68, 6, 80, 0.2), 0 6px 20px 0 rgba(43, 7, 85, 0.19);
 }
 div{
-    background-color: #0d6efd;
+    background-color: #001a66;
     color: white;
     padding-left: 100px;
     padding-top: 6px;

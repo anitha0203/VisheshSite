@@ -1,0 +1,126 @@
+<!--<h1>What we offer</h1>
+<div class="first">
+    <div class="one">
+        <img src="assets\creative.PNG" /><br><br>
+        <h2>Creative Services</h2>
+        <ul>
+            <li>Branding</li>
+            <li class="front">Logo</li>
+            <li class="front">Business Card</li>
+            <li>Brochures, Banners, and Guides</li>
+            <li>Social Media Artifacts</li>
+            <li>Product Marketing Support</li>
+        </ul>
+    </div>
+    <div class="two">
+        <img src="assets\digital.PNG" /><br><br>
+        <h2>Digital Services</h2>
+        <ul>
+            <li>Web Development</li>
+            <li>Newsletters</li>
+            <li class="front">E-mail Marketing</li>
+            <li>Marketing Automation</li>
+            <li class="front">HubSpot</li>
+            <li class="front">Eloqua</li>
+        </ul>
+    </div>
+    <div class="three">
+        <img src="assets\general.PNG" /><br><br>
+        <h2>General Services</h2>
+        <ul>
+            <li>Market Analysis</li>
+            <li>Preparing Actionable Insights</li>
+            <li>Dashboards Creation</li>
+            <li>Quarterly Results Review</li>
+            <li>PowerPoint Presentations</li>
+        </ul>
+    </div>
+    <div class="three">
+        <img src="assets\fullstack.PNG" /><br><br>
+        <h2>Full Stack</h2>
+        <ul>
+            <li>Web Applications Development</li>
+            <li class="front">React Native, Angular CLI, Node.js, Python</li>
+            <li class="front">MS SQL, MYSQL, Oracle DB, PostgreSQL, MongoDB, Redis</li>
+            <li class="front">Responsive, Adaptive UI Designing</li>
+            <li class="front">Mobile App Development</li>
+            <li>IT Infrastructure Management</li>
+            <li class="front">Database Administration: Oracle DB, MS SQL, Mango DB, PostgreSQL</li>
+            <li class="front">Web, App Server Administration: Apache Tomcat, Weblogic</li>
+            <li class="front">Server Administration: Windows Servers, Enterprise Linux, VMware</li>
+            <li class="front">Azure, AWS Cloud Administration</li>
+        </ul>
+    </div>
+</div>-->
+
+
+<div class="row">
+    <div class="col-4">
+      <div class="list-group" id="list-tab" role="tablist">
+        <button class="list-group-item list-group-item-action" id="list-home-list" data-toggle="list" (click)="create()" role="tab" aria-controls="home" style="width: 500px;">Creative Services</button>
+        <button class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list" (click)="digit()" role="tab" aria-controls="profile" style="width: 500px;">Digital Services</button>
+        <button class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list" (click)="gener()" role="tab" aria-controls="messages" style="width: 500px;">General Services</button>
+        <button class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list" (click)="stack()" role="tab" aria-controls="settings" style="width: 500px;">Full Stack</button>
+      </div>
+    </div>
+    <div class="col-8">
+      <div class="tab-content" id="nav-tabContent" style="margin-left: 140px;">
+        <div class="tab-pane fade show active" *ngIf="create1" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+            <ul>
+                <li>Branding</li>
+                <li class="front">Logo</li>
+                <li class="front">Business Card</li>
+                <li>Brochures, Banners, and Guides</li>
+                <li>Social Media Artifacts</li>
+                <li>Product Marketing Support</li>
+            </ul>
+        </div>
+        <div class="tab-pane fade show active" *ngIf="digi1" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+            <ul>
+                <li>Web Development</li>
+                <li>Newsletters</li>
+                <li class="front">E-mail Marketing</li>
+                <li>Marketing Automation</li>
+                <li class="front">HubSpot</li>
+                <li class="front">Eloqua</li>
+            </ul>
+        </div>
+        <div class="tab-pane fade show active" *ngIf="gene1" id="list-messages" role="tabpanel" aria-labelledby="list-messages-list">
+            <ul>
+                <li>Market Analysis</li>
+                <li>Preparing Actionable Insights</li>
+                <li>Dashboards Creation</li>
+                <li>Quarterly Results Review</li>
+                <li>PowerPoint Presentations</li>
+            </ul>
+        </div>
+        <div class="tab-pane fade show active" *ngIf="stk1" id="list-settings" role="tabpanel" aria-labelledby="list-settings-list">
+            <ul>
+                <li>Web Applications Development</li>
+                <li class="front">React Native, Angular CLI, Node.js, Python</li>
+                <li class="front">MS SQL, MYSQL, Oracle DB, PostgreSQL, MongoDB, Redis</li>
+                <li class="front">Responsive, Adaptive UI Designing</li>
+                <li class="front">Mobile App Development</li>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row1">
+      <h1 style="text-align: center;font-weight: 600;letter-spacing: 0.1em;margin-top: 50px;">The Leadership Team</h1>
+      <div style="float: left;margin-left: 27%;">
+          <img src="assets\Capture.PNG" />
+          <div style="text-align: center;font-size: 18px;">
+            <br><h2>Harsha Mallina</h2>
+            <p>Chief Bottle Washer</p>
+          </div>
+      </div>
+      <div style="float: right;margin-right: 27%;">
+        <img src="assets\Capture1.PNG" />
+        <div style="text-align: center;font-size: 18px;">
+           <br><h2>Ravi Pasupuleti</h2>
+           <p>Enterprise Architect</p>
+        </div>
+      </div>
+  </div>

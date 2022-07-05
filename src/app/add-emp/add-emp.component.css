@@ -5,7 +5,6 @@ body {
     background-color: #e5e5e5;
     font-family: 'Roboto', sans-serif;
 }
-
 .app-header {
     justify-content: space-between;
     position: fixed;
@@ -16,15 +15,10 @@ body {
     box-shadow: 0 3px 5px -1px rgba(0, 0, 0, .2), 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12);
 }
 
-.main-wrapper {
-    height: 80%;
-}
-
 .one{
     margin-left: 38%;
     margin-top: 10%;
     margin-right: auto;
-    
 }
 
 .box {
@@ -42,20 +36,74 @@ body {
     z-index: 5;
     max-width: 600px;
 }
-button
-{
-    margin-left: 150px;
-    
-}
 label{
     font-size: 18px;
 }
 .main-wrapper
  {
-    height: 80%;
     margin:0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    margin-top: 3%;
 }
+
+h2{
+    font-weight: 500;
+    text-align: center;
+    padding-top: 10px;
+    color: red;
+}
+@media only screen and (max-width: 1250px) {
+    .main-wrapper {
+        left: 48%;
+        right: -50px;
+        margin-top: 10%;
+    }
+  }
+@media only screen and (max-width: 1000px) {
+    .main-wrapper {
+        left: 48%;
+        right: -50px;
+        margin-top: 10%;
+    }
+  }
+  @media only screen and (max-width: 925px) {
+      .main-wrapper {
+          left: 48%;
+          right: -80px;
+          margin-top: 15%;
+      }
+    }
+  @media only screen and (max-width: 700px) {
+      .main-wrapper {
+          left: 48%;
+          right: -80px;
+          margin-top: 10%;
+      }
+    }
+  @media only screen and (max-width: 660px) {
+    .main-wrapper {
+        left: 48%;margin: 0px;right: -140px;
+        margin-top: 14%;
+    }
+  }
+  @media only screen and (max-width: 500px) {
+    .main-wrapper {
+        left: 47%;right: -190px;
+        margin-top: 20%;
+    }
+  }
+  @media only screen and (max-width: 515px) {
+    .main-wrapper {
+        left: 47%;right: -190px;
+        margin-top: 35%;
+    }
+  }
+  @media only screen and (max-width: 400px) {
+    .main-wrapper {
+        left: 47%;right: -190px;
+        margin-top: 30%;
+    }
+  }

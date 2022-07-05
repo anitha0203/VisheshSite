@@ -49,54 +49,86 @@
       </form>
     </mat-card>
   </div>-->
+  
   <div class="main-wrapper" fxLayout="row" fxLayoutAlign="center center">
     <mat-card class="box">
-    <h1 style="text-align: center;font-weight: 500;">Enter Employee details</h1><br>
-    <form [formGroup]="loginfrm" (ngSubmit)="onSubmit()">
-    <div class="col">
-    <label for="emp_id" class="form-label">Emp Id</label>
-    <input type="Number" id="emp_id" formControlName="emp_id" class="form-control" required name="emp_id" placeholder="Enter Employe Id" aria-label="Emp Id">
-    </div><br>
-    <div class="row g-3">
-    <div class="col">
-    <label for="first_name" class="form-label">First Name</label>
-    <input type="text" id="first_name" formControlName="first_name" required name="first_name" class="form-control" placeholder="First name" aria-label="First name">
-    </div>
-    <div class="col">
-    <label for="last_name" class="form-label">Last Name</label>
-    <input type="text" id="last_name" formControlName="last_name" required name="last_name" class="form-control" placeholder="Last name" aria-label="Last name">
-    </div>
-    </div>
-    <br>
-    
-    <div class="row g-3">
-    <div class="col-12">
-    <label for="email" class="form-label">Email</label>
-    <input type="email"  class="form-control" id="email" formControlName="email" required name="email" placeholder="Email">
-    </div><br>
-    <div class="col-12">
-    <label for="phone_num" class="form-label">Phone Number</label>
-    <input type="text" class="form-control" id="phone_num" formControlName="phone_num" required name="phone_num" placeholder="Phone Number">
-    </div>
-    <div class="col-12">
-    <label for="address" class="form-label">Address</label>
-    <input type="text" class="form-control" id="address" formControlName="address" required name="address" placeholder="Apartment, studio, or floor">
-    </div>
-    <div class="col-12"> 
-      <label for="gender" class="form-label">Gender</label>
-       <select id="gender" class="form-select" formControlName="gender" required name="gender">
-        <option>Male</option>
-        <option>Female</option>
-      </select>
-    </div>
-    <div class="col-12">
-      <label for="designation" class="form-label">Disignation</label>
-      <input type="text" class="form-control" id="designation" formControlName="designation" required name="designation" placeholder="Disignation">
-      </div>
-    <div class="col-12">
-    <button type="submit" class="btn btn-primary" >Sign in</button>
-    </div>
-    </div>
-    </form>
+     <h1 style="text-align: center;font-weight: 500;">Enter Employee details</h1><br>
+     <form [formGroup]="loginfrm" (ngSubmit)="saveCardDetails()">
+        <div class="col">
+          <label for="emp_id" class="form-label" >Emp Id</label>
+          <input type="Number" id="emp_id" formControlName="emp_id" class="form-control" required name="emp_id" placeholder="Enter Employe Id"
+           aria-label="Emp Id" [ngClass]="{ 'is-invalid': isFormSaved && regCard.emp_id.errors }" /> 
+          <div *ngIf="isFormSaved && regCard.emp_id.errors" class="invalid-feedback">
+           <div *ngIf="regCard.emp_id.errors.required">Emp ID is required</div>
+           <div *ngIf="regCard.emp_id.errors.pattern">Invalid Emp ID</div>
+          </div>
+        </div><br>
+        <div class="row g-3">
+          <div class="col">
+           <label for="first_name" class="form-label">First Name</label>
+           <input type="text" id="first_name" formControlName="first_name" required name="first_name" class="form-control" placeholder="First name" aria-label="First name" [ngClass]="{'is-invalid': isFormSaved && regCard.first_name.errors }" /> 
+           <div *ngIf="isFormSaved && regCard.first_name.errors" class="invalid-feedback">
+            <div *ngIf="regCard.first_name.errors.required">First Name is required</div>
+            <div *ngIf="regCard.first_name.errors.pattern">Invalid First Name</div>
+           </div>
+          </div>
+         <div class="col">
+           <label for="last_name" class="form-label">Last Name</label>
+           <input type="text" id="last_name" formControlName="last_name" required name="last_name" class="form-control" placeholder="Last name" aria-label="Last name" [ngClass]="{ 'is-invalid': isFormSaved && regCard.last_name.errors }" /> 
+            <div *ngIf="isFormSaved && regCard.last_name.errors" class="invalid-feedback">
+             <div *ngIf="regCard.last_name.errors.required">Last Name is required</div>
+             <div *ngIf="regCard.last_name.errors.pattern">Invalid Last Name</div>
+            </div>
+          </div>
+         <br>
+        
+          <div class="col-12">
+            <label for="email" class="form-label">Email</label>
+            <input type="email"  class="form-control" id="email" formControlName="email" required  name="email" placeholder="Email" [ngClass]="{'is-invalid': isFormSaved && regCard.email.errors }" /> 
+            <div *ngIf="isFormSaved && regCard.email.errors" class="invalid-feedback">
+              <div *ngIf="regCard.email.errors.required">Email is required</div>
+              <div *ngIf="regCard.email.errors.pattern">Invalid Email</div>
+            </div>
+          </div><br>
+          <div class="col-12">
+           <label for="phone_num" class="form-label">Phone Number</label>
+           <input type="text" class="form-control" id="phone_num" formControlName="phone_num" required name="phone_num" placeholder="Phone Number" [ngClass]="{ 'is-invalid': isFormSaved && regCard.phone_num.errors }" /> 
+           <div *ngIf="isFormSaved && regCard.phone_num.errors" class="invalid-feedback">
+             <div *ngIf="regCard.phone_num.errors.required">Phone Number is required</div>
+             <div *ngIf="regCard.phone_num.errors.pattern">Invalid Phone Number</div>
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" formControlName="address" required name="address" placeholder="Apartment, studio, or floor" [ngClass]="{ 'is-invalid': isFormSaved && regCard.address.errors }" /> 
+            <div *ngIf="isFormSaved && regCard.address.errors" class="invalid-feedback">
+             <div *ngIf="regCard.address.errors.required" >Address is required</div>
+             <div *ngIf = "regCard.address.errors.pattern" >Invalid Address</div>
+            </div>
+          </div>
+          <div class="col-12"> 
+           <label for="gender" class="form-label">Gender</label>
+            <select id="gender" class="form-select" formControlName="gender" required name="gender" > 
+             <option>Male</option> 
+              <option>Female</option>
+            </select>
+            <div *ngIf="isFormSaved && regCard.gender.errors" class="invalid-feedback">
+              <div *ngIf="regCard.gender.errors.required" >Gender is required</div>
+            </div>
+          </div>
+          <div class="col-12">
+            <label for="designation" class="form-label">Designation</label>
+             <input type="text" class="form-control" id="designation" formControlName="designation" required name="designation" placeholder="Disignation" [ngClass]="{ 'is-invalid': isFormSaved && regCard.designation.errors }" /> 
+             <div *ngIf="isFormSaved && regCard.designation.errors" class="invalid-feedback">
+               <div *ngIf="regCard.designation.errors.required">Disignation is required</div>
+               <div *ngIf="regCard.designation.errors.pattern">Invalid Disignation</div>
+             </div>
+           </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary" style="margin-left: 40%;">Sign in</button>
+          </div>  <br>
+          <h2>{{message}}</h2>
+        </div>
+      </form>
     </mat-card>
-    </div>
+  </div> 
